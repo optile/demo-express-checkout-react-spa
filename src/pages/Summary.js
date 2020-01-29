@@ -1,6 +1,6 @@
 import React from "react";
 import ExpressCheckout from "express-checkout";
-import getAttributes from "../configuration";
+import getAttributes from "../configuration/spa";
 
 const getLongId = () => {
     let params = new URLSearchParams(window.location.search);

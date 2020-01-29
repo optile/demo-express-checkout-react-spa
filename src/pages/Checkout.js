@@ -1,7 +1,7 @@
 import React from "react";
 import ExpressCheckout from "express-checkout";
 
-import getAttributes from "../configuration";
+import getAttributes from "../configuration/spa";
 
 function Checkout() {
   const attributes = getAttributes();

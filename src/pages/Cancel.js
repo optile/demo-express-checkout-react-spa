@@ -1,6 +1,7 @@
 import React from "react";
+import { withRouter } from "react-router";
 
-function Cancel() {
+function Cancel({location}) {
   return <div>Payment is cancelled</div>;
 }
-export default Cancel;
+export default withRouter(Cancel);
