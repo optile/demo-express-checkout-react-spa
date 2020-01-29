@@ -11,7 +11,7 @@ function App() {
     <div><Link to="/">Home</Link></div>
     <br />
     <br />
-      <div>
+      <div align="center">
         <Switch>
           <Route path="/checkout">
             <Checkout />

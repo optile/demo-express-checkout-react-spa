@@ -1,22 +1,25 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import ExpressCheckout from "express-checkout";
 
 import getAttributes from "../configuration/spa";
-import { useHistory } from "react-router-dom";
+import { getQueryStringFromObject } from "../utils";
 
 function Checkout() {
   let history = useHistory();
   const attributes = getAttributes();
 
-  const onProceed = ({ step }) => {
+  const onProceed = ({ step, dispatch, preset }) => {
     if (step === "update") {
-      history.push("/cancel");
+      const { parameters } = preset.redirect;
+      history.push("/summary?" + getQueryStringFromObject(parameters));
     }
   };
 
   return (
     <ExpressCheckout
-      {...attributes}
+      configuration={attributes.configuration}
+      createTransactionDetails={attributes.createTransactionDetails}
       customFunctions={{ onProceed }}
       mode={null}
       longId={null}

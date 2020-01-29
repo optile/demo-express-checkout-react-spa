@@ -1,4 +1,3 @@
-import customFunctions from "./customFunctions";
 export const getRedirectUrl = (url, parameters) => {
   const queryString = parameters.reduce(
     (acc, current) =>
@@ -35,7 +34,7 @@ const attributes = {
         country: "DE",
         providerRequest: requestData,
         payment: {
-          amount: 2,
+          amount: 20,
           currency: "EUR",
           reference: "Payment #1",
           longReference: {
@@ -44,13 +43,13 @@ const attributes = {
         },
         products: [
           {
-            name: "USB C cable",
-            amount: 2
+            name: "Ledger Nano S",
+            amount: 20
           }
         ]
       };
     },
-    customFunctions: customFunctions
+    customFunctions: {}
   },
   integration: {
     configuration: {
@@ -77,7 +76,7 @@ const attributes = {
         country: "DE",
         providerRequest: requestData,
         payment: {
-          amount: 2,
+          amount: 20,
           currency: "EUR",
           reference: "Payment #1",
           longReference: {
@@ -86,13 +85,13 @@ const attributes = {
         },
         products: [
           {
-            name: "USB C cable",
-            amount: 2
+            name: "Ledger Nano S",
+            amount: 20
           }
         ]
       };
     },
-    customFunctions: customFunctions
+    customFunctions: {}
   }
 };
 
