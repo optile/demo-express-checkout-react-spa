@@ -8,7 +8,10 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div>
+    <div><Link to="/">Home</Link></div>
+    <br />
+    <br />
+      <div align="center">
         <Switch>
           <Route path="/checkout">
             <Checkout />
