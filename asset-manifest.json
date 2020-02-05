@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.8ab6f918.chunk.css",
-    "main.js": "/static/js/main.825e98c2.chunk.js",
-    "main.js.map": "/static/js/main.825e98c2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.3e24de51.js",
-    "runtime-main.js.map": "/static/js/runtime-main.3e24de51.js.map",
-    "static/js/2.c2082167.chunk.js": "/static/js/2.c2082167.chunk.js",
-    "static/js/2.c2082167.chunk.js.map": "/static/js/2.c2082167.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.e4c8371297997cbfffa10d202486d3c8.js": "/precache-manifest.e4c8371297997cbfffa10d202486d3c8.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.8ab6f918.chunk.css.map": "/static/css/main.8ab6f918.chunk.css.map",
-    "static/js/2.c2082167.chunk.js.LICENSE": "/static/js/2.c2082167.chunk.js.LICENSE"
+    "main.css": "/demo-express-checkout-react-spa/static/css/main.8ab6f918.chunk.css",
+    "main.js": "/demo-express-checkout-react-spa/static/js/main.f6a6ac43.chunk.js",
+    "main.js.map": "/demo-express-checkout-react-spa/static/js/main.f6a6ac43.chunk.js.map",
+    "runtime-main.js": "/demo-express-checkout-react-spa/static/js/runtime-main.db270dda.js",
+    "runtime-main.js.map": "/demo-express-checkout-react-spa/static/js/runtime-main.db270dda.js.map",
+    "static/js/2.c2082167.chunk.js": "/demo-express-checkout-react-spa/static/js/2.c2082167.chunk.js",
+    "static/js/2.c2082167.chunk.js.map": "/demo-express-checkout-react-spa/static/js/2.c2082167.chunk.js.map",
+    "index.html": "/demo-express-checkout-react-spa/index.html",
+    "precache-manifest.e57d5cfeac552daf83e73e1a6bf6cd25.js": "/demo-express-checkout-react-spa/precache-manifest.e57d5cfeac552daf83e73e1a6bf6cd25.js",
+    "service-worker.js": "/demo-express-checkout-react-spa/service-worker.js",
+    "static/css/main.8ab6f918.chunk.css.map": "/demo-express-checkout-react-spa/static/css/main.8ab6f918.chunk.css.map",
+    "static/js/2.c2082167.chunk.js.LICENSE": "/demo-express-checkout-react-spa/static/js/2.c2082167.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.3e24de51.js",
+    "static/js/runtime-main.db270dda.js",
     "static/js/2.c2082167.chunk.js",
     "static/css/main.8ab6f918.chunk.css",
-    "static/js/main.825e98c2.chunk.js"
+    "static/js/main.f6a6ac43.chunk.js"
   ]
 }
