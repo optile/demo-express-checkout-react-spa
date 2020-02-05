@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <div>
-      <h2>This is your shop!</h2>
-      <img src="assets/demoshopusb.jpg" width="300"></img>
+      <h2>My Single Page Shop</h2>
+      <img src="assets/demoshopusb.jpg" width="300" alt="Ledger Nano S"></img>
       <h2>Ledger Nano S: 20€</h2>
       <Button variant="contained">
         <Link to="/checkout">

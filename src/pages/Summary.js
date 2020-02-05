@@ -15,15 +15,12 @@ function Summary() {
 
   const onProceed = ({ step, dispatch, preset }) => {
     if (step === "confirm") {
-      console.log(".....", step, dispatch, preset);
       const { parameters } = preset.redirect;
-      const interactionCode = preset.interaction.code;
       history.push("/thankyou?" + getQueryStringFromObject(parameters));
     }
   };
   const onAbort = ({ step, dispatch, preset }) => {
     if (step === "confirm") {
-      console.log(".....", step, dispatch, preset);
       const { parameters } = preset.redirect;
       history.push("/cancel?" + getQueryStringFromObject(parameters));
     }
