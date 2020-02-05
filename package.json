@@ -2,6 +2,7 @@
   "name": "demo-express-checkout-react-spa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://optile.github.io/demo-express-checkout-react-spa",
   "dependencies": {
     "@material-ui/core": "^4.9.0",
     "@testing-library/jest-dom": "^4.2.4",

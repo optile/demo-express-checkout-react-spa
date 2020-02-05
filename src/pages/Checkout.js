@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import ExpressCheckout from "express-checkout";
-
+import BASEURL from "./const";
 import getAttributes from "../configuration/spa";
 import { getQueryStringFromObject } from "../utils";
 
@@ -12,7 +12,9 @@ function Checkout() {
   const onProceed = ({ step, dispatch, preset }) => {
     if (step === "update") {
       const { parameters } = preset.redirect;
-      history.push("/summary?" + getQueryStringFromObject(parameters));
+      history.push(
+        BASEURL + "/summary?" + getQueryStringFromObject(parameters)
+      );
     }
   };
 

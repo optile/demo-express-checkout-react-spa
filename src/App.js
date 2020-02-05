@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import BASEURL from "./pages/const";
 import { Home, Checkout, Summary, Thankyou, Cancel } from "./pages";
 
 import "./App.css";
@@ -8,24 +8,26 @@ import "./App.css";
 function App() {
   return (
     <Router>
-    <div><Link to="/">Home</Link></div>
-    <br />
-    <br />
+      <div>
+        <Link to={BASEURL + "/"}>Home</Link>
+      </div>
+      <br />
+      <br />
       <div align="center">
         <Switch>
-          <Route path="/checkout">
+          <Route path={BASEURL + "/checkout"}>
             <Checkout />
           </Route>
-          <Route path="/summary">
+          <Route path={BASEURL + "/summary"}>
             <Summary />
           </Route>
-          <Route path="/thankyou">
+          <Route path={BASEURL + "/thankyou"}>
             <Thankyou />
           </Route>
-          <Route path="/cancel">
+          <Route path={BASEURL + "/cancel"}>
             <Cancel />
           </Route>
-          <Route path="/">
+          <Route path={BASEURL + "/"}>
             <Home />
           </Route>
         </Switch>

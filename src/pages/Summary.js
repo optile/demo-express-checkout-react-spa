@@ -1,6 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import ExpressCheckout from "express-checkout";
+import BASEURL from "./const";
 import getAttributes from "../configuration/spa";
 import { getQueryStringFromObject } from "../utils";
 
@@ -16,13 +17,13 @@ function Summary() {
   const onProceed = ({ step, dispatch, preset }) => {
     if (step === "confirm") {
       const { parameters } = preset.redirect;
-      history.push("/thankyou?" + getQueryStringFromObject(parameters));
+      history.push(BASEURL + "/thankyou?" + getQueryStringFromObject(parameters));
     }
   };
   const onAbort = ({ step, dispatch, preset }) => {
     if (step === "confirm") {
       const { parameters } = preset.redirect;
-      history.push("/cancel?" + getQueryStringFromObject(parameters));
+      history.push(BASEURL + "/cancel?" + getQueryStringFromObject(parameters));
     }
   };
   const longId = getLongId();
