@@ -14,7 +14,21 @@ const attributes = {
       baseURL: "https://api.integration.oscato.com/pci/v1/express",
       clientId: "v1.opt-div-app.639897dd9e374405846e4e6d93280c90",
       country: "DE",
-
+      language: "de_DE",
+      translation: [
+        {
+          language: "en",
+          resource: {
+            confirm: "confirm"
+          }
+        },
+        {
+          language: "de",
+          resource: {
+            confirm: "bestätigen"
+          }
+        }
+      ],
       paymentMethodsConfiguration: [
         {
           code: "PAYPAL",
@@ -23,8 +37,7 @@ const attributes = {
             color: "gold",
             shape: "rect",
             label: "checkout"
-          },
-          locale: "en_US"
+          }
         }
       ]
     },
@@ -56,7 +69,21 @@ const attributes = {
       baseURL: "https://api.integration.oscato.com/pci/v1/express",
       clientId: "v1.opt-div-app.d1f6628b66064154b5bde44cf095ad61",
       country: "DE",
-
+      language: "de_DE",
+      translation: [
+        {
+          language: "en",
+          resource: {
+            confirm: "confirm"
+          }
+        },
+        {
+          language: "de",
+          resource: {
+            confirm: "bestätigen"
+          }
+        }
+      ],
       paymentMethodsConfiguration: [
         {
           code: "PAYPAL",
@@ -65,8 +92,7 @@ const attributes = {
             color: "gold",
             shape: "rect",
             label: "checkout"
-          },
-          locale: "en_US"
+          }
         }
       ]
     },
