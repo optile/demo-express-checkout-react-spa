@@ -16,13 +16,29 @@ function Checkout() {
         BASEURL + "/summary?" + getQueryStringFromObject(parameters)
       );
     }
+    if (step === "cancel") {
+      const { parameters } = preset.redirect;
+      history.push(
+        BASEURL + "/checkout?" + getQueryStringFromObject(parameters)
+      );
+    }
+  };
+  const onAbort = ({ step, dispatch, preset }) => {
+    const { parameters } = preset.redirect;
+    history.push(BASEURL + "/checkout?" + getQueryStringFromObject(parameters));
+  };
+
+  // this is used when you click to close the pop up
+  const onCustomerAbort = ({ step, dispatch, preset }) => {
+    const { parameters } = preset.redirect;
+    history.push(BASEURL + "/checkout?" + getQueryStringFromObject(parameters));
   };
 
   return (
     <ExpressCheckout
       configuration={attributes.configuration}
       createTransactionDetails={attributes.createTransactionDetails}
-      customFunctions={{ onProceed }}
+      customFunctions={{ onProceed, onAbort, onCustomerAbort }}
       mode={null}
       longId={null}
     />
