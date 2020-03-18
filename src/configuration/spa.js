@@ -12,7 +12,7 @@ const attributes = {
   local: {
     configuration: {
       baseURL: "https://api.integration.oscato.com/pci/v1/express",
-      clientId: "v1.opt-div-app.639897dd9e374405846e4e6d93280c90",
+      clientId: "v1.opt-div-app.5a3eb96a10b94efb9d19f2ff7137e7e5",
       country: "DE",
       language: "de_DE",
       translation: [
@@ -67,7 +67,7 @@ const attributes = {
   integration: {
     configuration: {
       baseURL: "https://api.integration.oscato.com/pci/v1/express",
-      clientId: "v1.opt-div-app.d1f6628b66064154b5bde44cf095ad61",
+      clientId: "v1.opt-div-app.51d30325cb0d4b5bb9cce2e7e6b15b1f",
       country: "DE",
       language: "de_DE",
       translation: [
@@ -120,10 +120,19 @@ const attributes = {
     customFunctions: {}
   }
 };
+function getEnv(queryStringEnv) {
+  if (queryStringEnv) {
+    return queryStringEnv;
+  }
+  if (window.location.hostname === "localhost") {
+    return "local";
+  }
+  return "integration";
+}
 
 export default function getAttributes() {
   var urlParams = new URLSearchParams(window.location.search);
-  var env = urlParams.get("env") || "local";
+  var env = getEnv(urlParams.get("env"));
 
   return attributes[env] || null;
 }
