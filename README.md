@@ -19,7 +19,7 @@ and to disable the hard redirect, and do it using javascript routing.
 
 Open <http://localhost:3000/>
 
-Live Demo - https://optile.github.io/demo-express-checkout-react-spa
+Live Demo - <https://optile.github.io/demo-express-checkout-react-spa>
 
 <br/>
 <br/>
