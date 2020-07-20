@@ -3,13 +3,8 @@ import { useHistory } from "react-router-dom";
 import ExpressCheckout from "express-checkout";
 import BASEURL from "./const";
 import getAttributes from "../configuration/spa";
-import { getQueryStringFromObject } from "../utils";
+import { getQueryStringFromObject, getLongId } from "../utils";
 
-const getLongId = () => {
-  let params = new URLSearchParams(window.location.search);
-
-  return params.get("longId");
-};
 function Summary() {
   let history = useHistory();
   const attributes = getAttributes();
