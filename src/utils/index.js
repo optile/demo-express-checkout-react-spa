@@ -1,3 +1,5 @@
+import { MERCHANT } from "../server/constants";
+
 export const getQueryStringFromObject = (parameters) => {
     const queryString = parameters.reduce(
         (acc, current) => `${acc}${encodeURIComponent(current.name)}=${encodeURIComponent(current.value)}&`,
@@ -20,4 +22,4 @@ export const getLongId = () => {
  * This function returns encrypted authorization token
  * @returns {String} authorization
  */
-export const getAuthorization = () => `Basic ${btoa(`${process.env.REACT_APP_MERCHANT_ENV}:${process.env.REACT_APP_TOKEN_ENV}`)}`;
+export const getAuthorization = () => `Basic ${btoa(`${MERCHANT.USER}:${MERCHANT.TOKEN}`)}`;

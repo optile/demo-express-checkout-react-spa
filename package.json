@@ -18,8 +18,8 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
-    "start": "REACT_APP_MERCHANT_ENV=555 REACT_APP_TOKEN_ENV=b348k9ho52e57lmksjl3um438k1e50cde1tbmlekrd react-scripts start",
-    "onlybuild": "REACT_APP_MERCHANT_ENV=555 REACT_APP_TOKEN_ENV=b348k9ho52e57lmksjl3um438k1e50cde1tbmlekrd react-scripts build",
+    "start": "react-scripts start",
+    "onlybuild": "react-scripts build",
     "build": "npm run onlybuild",
     "ghpages": "gh-pages -d build",
     "postbuild": "npm run ghpages",
