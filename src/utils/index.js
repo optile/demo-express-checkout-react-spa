@@ -1,4 +1,4 @@
-import { MERCHANT } from "../server/constants";
+import { attributes } from "../server/constants";
 
 export const getQueryStringFromObject = (parameters) => {
     const queryString = parameters.reduce(
@@ -19,7 +19,23 @@ export const getLongId = () => {
 };
 
 /**
+ * This function returns the object which contain
+ * merchant user and token according to whether its
+ * localhost or integration
+ * @returns {Object} MERCHANT
+ */
+const getMerchantToken = () => {
+    if (window.location.hostname === "localhost") {
+        return attributes.local.MERCHANT;
+    }
+    return attributes.integration.MERCHANT;
+};
+
+/**
  * This function returns encrypted authorization token
  * @returns {String} authorization
  */
-export const getAuthorization = () => `Basic ${btoa(`${MERCHANT.USER}:${MERCHANT.TOKEN}`)}`;
+export const getAuthorization = () => {
+    const MERCHANT = getMerchantToken();
+    return `Basic ${btoa(`${MERCHANT.USER}:${MERCHANT.TOKEN}`)}`;
+};
