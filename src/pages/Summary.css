@@ -4,6 +4,7 @@
 
 .detailsContainer {
 	display: flex;
+	justify-content: center;
 }
 
 .label {
