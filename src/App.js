@@ -1,3 +1,11 @@
+/*
+ * Copyright(c) 2020-2021 Payoneer Germany GmbH.
+ * https://www.payoneer.com
+ *
+ * This file is open source and available under the MIT license.
+ * See the LICENSE file for more information.
+ */
+
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import BASEURL from "./pages/const";
