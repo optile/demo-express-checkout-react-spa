@@ -8,7 +8,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import ExpressCheckout from "express-checkout";
+import ExpressCheckout from "@payoneer/express-checkout";
 import BASEURL from "./const";
 import getAttributes from "../configuration/spa";
 import { getQueryStringFromObject, getLongId } from "../utils";

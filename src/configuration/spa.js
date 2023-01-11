@@ -7,140 +7,160 @@
  */
 
 export const getRedirectUrl = (url, parameters) => {
-  const queryString = parameters.reduce(
-    (acc, current) =>
-      `${acc}${encodeURIComponent(current.name)}=${encodeURIComponent(
-        current.value
-      )}&`,
-    ""
-  );
-  return `${url}${url.includes("?") ? "&" : "?"}${queryString.slice(0, -1)}`;
+    const queryString = parameters.reduce(
+        (acc, current) => `${acc}${encodeURIComponent(current.name)}=${encodeURIComponent(current.value)}&`,
+        ""
+    );
+    return `${url}${url.includes("?") ? "&" : "?"}${queryString.slice(0, -1)}`;
 };
 const attributes = {
-  local: {
-    configuration: {
-      baseURL: "https://api.integration.oscato.com/pci/v1/express",
-      clientId: "v1.opt-div-app.5a3eb96a10b94efb9d19f2ff7137e7e5",
-      country: "DE",
-      language: "de_DE",
-      translation: [
-        {
-          language: "en",
-          resource: {
-            confirm: "confirm"
-          }
+    local: {
+        configuration: {
+            baseURL: "https://api.pi-nightly.integration.oscato.com/pci/v1/express",
+            clientId: "v1.opt-div-app.ac6b9d09d909429f86f922b778a919f8",
+            currency: "GBP",
+            country: "GB",
+            language: "en_GB",
+            translation: [
+                {
+                    language: "en",
+                    resource: {
+                        confirm: "Confirm",
+                    },
+                },
+                {
+                    language: "de",
+                    resource: {
+                        confirm: "Bestätigen",
+                    },
+                },
+            ],
+            paymentMethodsConfiguration: [
+                {
+                    code: "PAYPAL",
+                    clientId: "sb",
+                    style: {
+                        size: "small",
+                        color: "gold",
+                        shape: "rect",
+                        label: "checkout",
+                    },
+                },
+                {
+                    code: "PAYPAL_PAY_LATER",
+                    clientId: "sb",
+                    style: {
+                        size: "small",
+                        color: "gold",
+                        shape: "rect",
+                        label: "checkout",
+                    },
+                },
+            ],
         },
-        {
-          language: "de",
-          resource: {
-            confirm: "bestätigen"
-          }
-        }
-      ],
-      paymentMethodsConfiguration: [
-        {
-          code: "PAYPAL",
-          style: {
-            size: "small",
-            color: "gold",
-            shape: "rect",
-            label: "checkout"
-          }
-        }
-      ]
-    },
-    createTransactionDetails: function(requestData) {
-      return {
-        transactionId: "tr-" + new Date().getTime(),
-        country: "DE",
-        providerRequest: requestData,
-        payment: {
-          amount: 20,
-          currency: "EUR",
-          reference: "Payment #1",
-          longReference: {
-            essential: "Thank you for your purchase!"
-          }
+        createTransactionDetails: function (requestData) {
+            return {
+                transactionId: "tr-" + new Date().getTime(),
+                country: "GB",
+                providerRequest: requestData,
+                payment: {
+                    amount: 47,
+                    currency: "GBP",
+                    reference: "Payment #1",
+                    longReference: {
+                        essential: "Thank you for your purchase!",
+                    },
+                },
+                products: [
+                    {
+                        name: "USB C cable",
+                        amount: 47,
+                    },
+                ],
+            };
         },
-        products: [
-          {
-            name: "Ledger Nano S",
-            amount: 20
-          }
-        ]
-      };
+        customFunctions: {},
     },
-    customFunctions: {}
-  },
-  integration: {
-    configuration: {
-      baseURL: "https://api.integration.oscato.com/pci/v1/express",
-      clientId: "v1.opt-div-app.51d30325cb0d4b5bb9cce2e7e6b15b1f",
-      country: "DE",
-      language: "de_DE",
-      translation: [
-        {
-          language: "en",
-          resource: {
-            confirm: "confirm"
-          }
+    "pi-nightly": {
+        configuration: {
+            baseURL: "https://api.pi-nightly.integration.oscato.com/pci/v1/express",
+            clientId: "v1.opt-div-app.e5e9201798fe4e2aac607dc2ac76d84d",
+            currency: "GBP",
+            country: "GB",
+            language: "en_US",
+            translation: [
+                {
+                    language: "en",
+                    resource: {
+                        confirm: "confirm",
+                    },
+                },
+                {
+                    language: "de",
+                    resource: {
+                        confirm: "bestätigen",
+                    },
+                },
+            ],
+            paymentMethodsConfiguration: [
+                {
+                    code: "PAYPAL",
+                    style: {
+                        size: "small",
+                        color: "gold",
+                        shape: "rect",
+                        label: "checkout",
+                    },
+                },
+                {
+                    code: "PAYPAL_PAY_LATER",
+                    clientId: "sb",
+                    style: {
+                        size: "small",
+                        color: "gold",
+                        shape: "rect",
+                        label: "checkout",
+                    },
+                },
+            ],
         },
-        {
-          language: "de",
-          resource: {
-            confirm: "bestätigen"
-          }
-        }
-      ],
-      paymentMethodsConfiguration: [
-        {
-          code: "PAYPAL",
-          style: {
-            size: "small",
-            color: "gold",
-            shape: "rect",
-            label: "checkout"
-          }
-        }
-      ]
-    },
-    createTransactionDetails: function(requestData) {
-      return {
-        transactionId: "tr-" + new Date().getTime(),
-        country: "DE",
-        providerRequest: requestData,
-        payment: {
-          amount: 20,
-          currency: "EUR",
-          reference: "Payment #1",
-          longReference: {
-            essential: "Thank you for your purchase!"
-          }
+        createTransactionDetails: function (requestData) {
+            return {
+                transactionId: "tr-" + new Date().getTime(),
+                country: "DE",
+                providerRequest: requestData,
+                payment: {
+                    amount: 20,
+                    currency: "EUR",
+                    reference: "Payment #1",
+                    longReference: {
+                        essential: "Thank you for your purchase!",
+                    },
+                },
+                products: [
+                    {
+                        name: "Ledger Nano S",
+                        amount: 20,
+                    },
+                ],
+            };
         },
-        products: [
-          {
-            name: "Ledger Nano S",
-            amount: 20
-          }
-        ]
-      };
+        customFunctions: {},
     },
-    customFunctions: {}
-  }
 };
 function getEnv(queryStringEnv) {
-  if (queryStringEnv) {
-    return queryStringEnv;
-  }
-  if (window.location.hostname === "localhost") {
-    return "local";
-  }
-  return "integration";
+    if (queryStringEnv) {
+        return queryStringEnv;
+    }
+    if (window.location.hostname === "localhost") {
+        return "local";
+    }
+    return "pi-nightly";
 }
 
 export default function getAttributes() {
-  var urlParams = new URLSearchParams(window.location.search);
-  var env = getEnv(urlParams.get("env"));
+    var urlParams = new URLSearchParams(window.location.search);
+    var env = getEnv(urlParams.get("env"));
 
-  return attributes[env] || null;
+    return attributes[env] || null;
 }

@@ -29,14 +29,14 @@ export const getLongId = () => {
 /**
  * This function returns the object which contain
  * merchant user and token according to whether its
- * localhost or integration
+ * localhost or pi-nightly
  * @returns {Object} MERCHANT
  */
 const getMerchantToken = () => {
     if (window.location.hostname === "localhost") {
         return attributes.local.MERCHANT;
     }
-    return attributes.integration.MERCHANT;
+    return attributes["pi-nightly"].MERCHANT;
 };
 
 /**
