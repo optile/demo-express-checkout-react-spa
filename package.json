@@ -1,48 +1,48 @@
 {
-  "name": "demo-express-checkout-react-spa",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://optile.github.io/demo-express-checkout-react-spa",
-  "dependencies": {
-    "@material-ui/core": "^4.9.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "express-checkout": "^1.7.0",
-    "gh-pages": "^2.2.0",
-    "history": "^4.10.1",
-    "query-string": "^6.13.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "onlybuild": "react-scripts build",
-    "build": "npm run onlybuild",
-    "ghpages": "gh-pages -d build",
-    "postbuild": "npm run ghpages",
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "acorn": "^7.1.1",
-    "serialize-javascript": "^2.1.2"
-  }
+    "name": "demo-express-checkout-react-spa",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://optile.github.io/demo-express-checkout-react-spa",
+    "dependencies": {
+        "@material-ui/core": "^4.9.0",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@payoneer/express-checkout": "^1.12.0",
+        "gh-pages": "^2.2.0",
+        "history": "^4.10.1",
+        "query-string": "^6.13.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-router-dom": "^5.1.2",
+        "react-scripts": "^3.4.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "onlybuild": "react-scripts build",
+        "build": "npm run onlybuild",
+        "ghpages": "gh-pages -d build",
+        "postbuild": "npm run ghpages",
+        "test": "echo \"Error: no test specified\" && exit 0",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "acorn": "^7.1.1",
+        "serialize-javascript": "^2.1.2"
+    }
 }
