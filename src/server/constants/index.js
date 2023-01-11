@@ -7,16 +7,16 @@
  */
 
 export const attributes = {
-    local: {
-        MERCHANT: {
-            USER: "OPP",
-            TOKEN: "3d6810q5vgkvvfja3ahin1lue4nmk7sk4gfphn1c",
-        },
-    },
-    "pi-nightly": {
-        MERCHANT: {
-            USER: "OPP",
-            TOKEN: "3d6810q5vgkvvfja3ahin1lue4nmk7sk4gfphn1c",
-        },
-    },
+	local: {
+		MERCHANT: {
+			USER: "OPP",
+			TOKEN: "3d6810q5vgkvvfja3ahin1lue4nmk7sk4gfphn1c",
+		},
+	},
+	"pi-nightly": {
+		MERCHANT: {
+			USER: "OPP",
+			TOKEN: "3d6810q5vgkvvfja3ahin1lue4nmk7sk4gfphn1c",
+		},
+	},
 };

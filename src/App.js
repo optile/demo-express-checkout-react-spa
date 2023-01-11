@@ -14,34 +14,34 @@ import { Home, Checkout, Summary, Thankyou, Cancel } from "./pages";
 import "./App.css";
 
 function App() {
-    return (
-        <Router>
-            <div>
-                <Link to={BASEURL + "/"}>Home</Link>
-            </div>
-            <br />
-            <br />
-            <div align="center">
-                <Switch>
-                    <Route path={BASEURL + "/checkout"}>
-                        <Checkout />
-                    </Route>
-                    <Route path={BASEURL + "/summary"}>
-                        <Summary />
-                    </Route>
-                    <Route path={BASEURL + "/thankyou"}>
-                        <Thankyou />
-                    </Route>
-                    <Route path={BASEURL + "/cancel"}>
-                        <Cancel />
-                    </Route>
-                    <Route path={BASEURL + "/"}>
-                        <Home />
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
-    );
+	return (
+		<Router>
+			<div>
+				<Link to={BASEURL + "/"}>Home</Link>
+			</div>
+			<br />
+			<br />
+			<div align="center">
+				<Switch>
+					<Route path={BASEURL + "/checkout"}>
+						<Checkout />
+					</Route>
+					<Route path={BASEURL + "/summary"}>
+						<Summary />
+					</Route>
+					<Route path={BASEURL + "/thankyou"}>
+						<Thankyou />
+					</Route>
+					<Route path={BASEURL + "/cancel"}>
+						<Cancel />
+					</Route>
+					<Route path={BASEURL + "/"}>
+						<Home />
+					</Route>
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
